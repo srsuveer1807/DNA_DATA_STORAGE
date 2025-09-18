@@ -1,0 +1,11 @@
+# Core scientific stack
+numpy
+pandas
+
+# Deep learning
+tensorflow
+
+# App/GUI
+streamlit
+
+
