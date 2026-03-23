@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNA Data Storage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>DNA Data Storage Simulator</h1>
+
+    <form method="POST" action="/">
+        
+        <label>Enter Text:</label>
+        <textarea name="text" required placeholder="Type something..."></textarea>
+
+        <label>Redundancy (1–10):</label>
+        <input type="number" name="redundancy" min="1" max="10" value="1">
+
+        <label>Mutation Severity (%):</label>
+        <input type="number" name="severity" min="0" max="100" value="0">
+
+        <br><br>
+
+        <button type="submit" class="primary">Encode & Process</button>
+
+    </form>
+
+    <br>
+
+    <a href="/clear">
+        <button class="secondary">Clear DNA File</button>
+    </a>
+
+</div>
+
+</body>
+</html>

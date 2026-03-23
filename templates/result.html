@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNA Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .dna-box {
+            word-wrap: break-word;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Results</h1>
+
+    <div class="result-box">
+        <h3>Original DNA</h3>
+        <p class="dna-box">{{ results.dna }}</p>
+    </div>
+
+    <div class="result-box">
+        <h3>Mutated DNA (Highlighted)</h3>
+        <p class="dna-box">
+            {{ results.highlighted_mutations | safe }}
+        </p>
+    </div>
+
+    <div class="result-box">
+        <h3>Mutation Rate</h3>
+        <p>{{ results.mutation_rate }}%</p>
+    </div>
+
+    <div class="result-box">
+        <h3>Decoded (Original)</h3>
+        <p>{{ results.decoded_original }}</p>
+    </div>
+
+    <div class="result-box">
+        <h3>Decoded (Mutated)</h3>
+        <p>{{ results.decoded_mutated }}</p>
+    </div>
+
+    <br>
+
+    <a href="/download">
+        <button class="primary">Download DNA File</button>
+    </a>
+
+    <a href="/">
+        <button class="secondary">Back</button>
+    </a>
+
+</div>
+
+</body>
+</html>
